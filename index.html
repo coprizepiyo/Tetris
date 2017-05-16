@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>俄罗斯方块</title>
+	<style type="text/css">
+		#canvas {
+			background: black;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+			width: 500px;
+			height: 500px;
+		}
+	</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript" src="./js/map.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+	var oCanvas = document.getElementByid('canvas');
+	var gc = oCanvas.getContext('2d');
+	var map = map(12, 12);
+
+	function map (rowCount, colCount) {
+		var data = [];
+		for (var i = 0; i < rowCount; i++) {
+			data.push([]);
+			for (var j = 0; j < colCount; j++) {
+				data[i].push(0)
+			}
+		}
+	}
+}
+</script>
+</body>
+</html>
